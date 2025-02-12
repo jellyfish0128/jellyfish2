@@ -1,0 +1,66 @@
+body {
+    background-color: #fce4ec;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffccdd;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+#enterBtn {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff99bb;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.emoji {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.separator {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff6699;
+}
+
+/* 功能框 */
+.box {
+    background-color: #ffe6f2;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* 便利貼（彈窗） */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: pink;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}

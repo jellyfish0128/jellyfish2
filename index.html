@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jellyfish0128</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">jellyfish( ꜆⌯' '⌯)꜆♡</div>
+    
+    <div class="container">
+        <button id="enterBtn">Jellyfish</button>
+    </div>
+
+    <div id="mainContent" class="hidden">
+        <div class="emoji">(˶ᐢ. .ᐢ˵)</div>
+        <div id="changingText">初めまして、私は Jellyfish です</div>
+        <div class="separator">♡ ••┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•• ♡</div>
+
+        <!-- 倒數日 -->
+        <div class="box">
+            <h3>📅 倒數日</h3>
+            <p id="countdown">計算中...</p>
+        </div>
+
+        <!-- 便利貼 -->
+        <div class="box">
+            <h3>📌 便利貼</h3>
+            <button onclick="openNotePopup()">新增留言</button>
+            <div id="notes"></div>
+        </div>
+
+        <!-- 代辦事項 -->
+        <div class="box">
+            <h3>✅ 代辦事項</h3>
+            <input type="text" id="todoInput" placeholder="輸入代辦事項...">
+            <button onclick="addTodo()">新增</button>
+            <ul id="todoList"></ul>
+        </div>
+
+        <!-- Instagram 連結 -->
+        <div class="box">
+            <h3>📎 連結</h3>
+            <a href="https://instagram.com/你的帳號" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+    <!-- 便利貼彈窗 -->
+    <div id="notePopup" class="popup">
+        <textarea id="noteText" placeholder="輸入留言..."></textarea>
+        <button onclick="saveNote()">儲存</button>
+        <button onclick="closeNotePopup()">取消</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
