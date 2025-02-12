@@ -44,23 +44,27 @@ body {
     color: #ff6699;
 }
 
-/* 功能框 */
-.box {
-    background-color: #ffe6f2;
+/* 功能框框 */
+.countdown-box, .calendar-box, .notes-box, .todo-box, .link-box {
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
-    margin: 20px auto;
+    margin: 10px auto;
     width: 80%;
     border-radius: 10px;
 }
 
-/* 便利貼（彈窗） */
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: pink;
-    padding: 20px;
-    border-radius: 10px;
-    display: none;
+/* 便利貼 */
+.note {
+    background-color: yellow;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* 輸入框 */
+input, button {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
 }

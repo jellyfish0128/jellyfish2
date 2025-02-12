@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="header">jellyfish( ꜆⌯' '⌯)꜆♡</div>
     
     <div class="container">
@@ -18,40 +17,39 @@
         <div class="emoji">(˶ᐢ. .ᐢ˵)</div>
         <div id="changingText">初めまして、私は Jellyfish です</div>
         <div class="separator">♡ ••┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•• ♡</div>
+        
+        <!-- 倒數日期 -->
+        <div class="countdown-box">
+            <h2>˙˚ʚ水母のcos場次日期倒數ɞ˚˙</h2>
+            <p id="countdownText"></p>
+        </div>
 
-        <!-- 倒數日 -->
-        <div class="box">
-            <h3>📅 倒數日</h3>
-            <p id="countdown">計算中...</p>
+        <!-- 月曆 -->
+        <div class="calendar-box">
+            <h2>行程月曆</h2>
+            <div id="calendar"></div>
         </div>
 
         <!-- 便利貼 -->
-        <div class="box">
-            <h3>📌 便利貼</h3>
-            <button onclick="openNotePopup()">新增留言</button>
-            <div id="notes"></div>
+        <div class="notes-box">
+            <h2>便利貼留言板</h2>
+            <button id="addNote">新增便利貼</button>
+            <div id="notesContainer"></div>
         </div>
 
         <!-- 代辦事項 -->
-        <div class="box">
-            <h3>✅ 代辦事項</h3>
-            <input type="text" id="todoInput" placeholder="輸入代辦事項...">
-            <button onclick="addTodo()">新增</button>
+        <div class="todo-box">
+            <h2>待辦事項</h2>
+            <input type="text" id="todoInput" placeholder="今天有什麼要做的嗎꜀(^. .^꜀ )꜆੭">
+            <button id="addTodo">添加日程</button>
+            <button id="clearTodo">全部完成</button>
             <ul id="todoList"></ul>
         </div>
 
         <!-- Instagram 連結 -->
-        <div class="box">
-            <h3>📎 連結</h3>
-            <a href="https://instagram.com/你的帳號" target="_blank">Instagram</a>
+        <div class="link-box">
+            <a href="https://www.instagram.com/jelly.fish0128?igsh=MWFrNzJxcDE2b3NhMQ%3D%3D&utm_source=qr" target="_blank">Follow me on Instagram</a>
         </div>
-    </div>
-
-    <!-- 便利貼彈窗 -->
-    <div id="notePopup" class="popup">
-        <textarea id="noteText" placeholder="輸入留言..."></textarea>
-        <button onclick="saveNote()">儲存</button>
-        <button onclick="closeNotePopup()">取消</button>
     </div>
 
     <script src="script.js"></script>
