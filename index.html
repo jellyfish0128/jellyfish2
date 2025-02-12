@@ -1,55 +1,50 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jellyfish0128</title>
+    <title>jellyfish(っ≧▽≦)っ♡</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">jellyfish( ꜆⌯' '⌯)꜆♡</div>
-    
-    <div class="container">
-        <button id="enterBtn">Jellyfish</button>
+
+    <h1>jellyfish(っ≧▽≦)っ♡</h1>
+    <p>世界に無駄な努力なんてない</p>
+    <div class="divider">♡ ••┈┈┈┈┈┈•• ♡</div>
+
+    <!-- 倒數日 -->
+    <div class="section">
+        <h2>˙˚ʚ水母のcos場次日期倒數ɞ˚˙</h2>
+        <p>距離水母のcos場次日期還有 <span id="daysLeft"></span> 天</p>
     </div>
 
-    <div id="mainContent" class="hidden">
-        <div class="emoji">(˶ᐢ. .ᐢ˵)</div>
-        <div id="changingText">初めまして、私は Jellyfish です</div>
-        <div class="separator">♡ ••┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•• ♡</div>
-        
-        <!-- 倒數日期 -->
-        <div class="countdown-box">
-            <h2>˙˚ʚ水母のcos場次日期倒數ɞ˚˙</h2>
-            <p id="countdownText"></p>
-        </div>
+    <!-- 月曆 -->
+    <div class="section">
+        <h2>行程月曆</h2>
+        <div id="calendar"></div>
+    </div>
 
-        <!-- 月曆 -->
-        <div class="calendar-box">
-            <h2>行程月曆</h2>
-            <div id="calendar"></div>
-        </div>
+    <!-- 便利貼 -->
+    <div class="section">
+        <h2>便利貼</h2>
+        <button id="addStickyNote">新增便利貼</button>
+        <div id="stickyNotesContainer"></div>
+    </div>
 
-        <!-- 便利貼 -->
-        <div class="notes-box">
-            <h2>便利貼留言板</h2>
-            <button id="addNote">新增便利貼</button>
-            <div id="notesContainer"></div>
-        </div>
-
-        <!-- 代辦事項 -->
-        <div class="todo-box">
-            <h2>待辦事項</h2>
-            <input type="text" id="todoInput" placeholder="今天有什麼要做的嗎꜀(^. .^꜀ )꜆੭">
+    <!-- 代辦事項 -->
+    <div class="section">
+        <h2>待辦事項</h2>
+        <input type="text" id="todoInput" placeholder="今天有什麼要做的嗎꜀(^. .^꜀ )꜆੭">
+        <div class="button-group">
             <button id="addTodo">添加日程</button>
-            <button id="clearTodo">全部完成</button>
-            <ul id="todoList"></ul>
+            <button id="clearTodos">全部完成</button>
         </div>
+        <ul id="todoList"></ul>
+    </div>
 
-        <!-- Instagram 連結 -->
-        <div class="link-box">
-            <a href="https://www.instagram.com/jelly.fish0128?igsh=MWFrNzJxcDE2b3NhMQ%3D%3D&utm_source=qr" target="_blank">Follow me on Instagram</a>
-        </div>
+    <!-- 超連結 -->
+    <div class="section">
+        <a href="https://www.instagram.com/jelly.fish0128" class="instagram-link">這是水母的哀居</a>
     </div>
 
     <script src="script.js"></script>

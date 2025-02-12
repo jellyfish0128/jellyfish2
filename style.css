@@ -1,70 +1,61 @@
 body {
-    background-color: #fce4ec;
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
+    background-color: #ffe4ec;
     text-align: center;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffccdd;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
+h1 {
+    color: #ff7ea8;
 }
 
-.container {
-    margin-top: 100px;
-}
-
-#enterBtn {
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #ff99bb;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.hidden {
-    display: none;
-}
-
-.emoji {
-    font-size: 50px;
-    margin-top: 20px;
-}
-
-.separator {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #ff6699;
-}
-
-/* 功能框框 */
-.countdown-box, .calendar-box, .notes-box, .todo-box, .link-box {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 15px;
-    margin: 10px auto;
+.section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
     width: 80%;
     border-radius: 10px;
 }
 
-/* 便利貼 */
-.note {
-    background-color: yellow;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    display: inline-block;
+.divider {
+    font-size: 20px;
+    color: #ff7ea8;
+    margin: 10px 0;
 }
 
-/* 輸入框 */
-input, button {
+button {
+    background-color: #ffb6c1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
     margin: 5px;
+}
+
+#stickyNotesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sticky-note {
+    background-color: #ffd1dc;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: left;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.instagram-link {
+    color: pink;
+    font-size: 18px;
+    text-decoration: none;
 }

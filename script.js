@@ -1,54 +1,50 @@
-// 進入按鈕
-document.getElementById("enterBtn").addEventListener("click", function() {
-    document.getElementById("mainContent").classList.remove("hidden");
-    this.style.display = "none";
-});
+// 倒數日 - 可自行修改 eventDate
+const eventDate = "2025-05-01"; 
 
-// 變換日語句子
-const phrases = [
-    "初めまして、私は Jellyfish です",
-    "世界に無駄な努力なんてない",
-    "あなたはただ自分らしくいればいい"
-];
-let index = 0;
-setInterval(() => {
-    index = (index + 1) % phrases.length;
-    document.getElementById("changingText").textContent = phrases[index];
-}, 30000);
-
-// 倒數日設定
-const targetDate = new Date("2025-04-05"); // 在這裡修改你的目標日期
 function updateCountdown() {
-    const today = new Date();
-    const diffTime = targetDate - today;
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    document.getElementById("countdownText").innerText = `距離水母のcos場次日期還有 ${diffDays} 天`;
+    let today = new Date();
+    let targetDate = new Date(eventDate);
+    let timeDiff = targetDate - today;
+    let daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+    document.getElementById("daysLeft").innerText = daysLeft;
 }
+
 updateCountdown();
 
+// 月曆（可編輯）
+function createCalendar() {
+    let calendarDiv = document.getElementById("calendar");
+    calendarDiv.innerHTML = "<p>這裡是可編輯的月曆（開發中）</p>";
+}
+
+createCalendar();
+
 // 便利貼
-document.getElementById("addNote").addEventListener("click", function() {
-    let text = prompt("輸入便利貼內容：");
-    if (text) {
+document.getElementById("addStickyNote").addEventListener("click", function() {
+    let noteText = prompt("輸入你的便利貼內容：");
+    if (noteText) {
         let note = document.createElement("div");
-        note.className = "note";
-        note.innerText = text;
-        document.getElementById("notesContainer").appendChild(note);
+        note.className = "sticky-note";
+        note.innerText = noteText;
+        document.getElementById("stickyNotesContainer").appendChild(note);
     }
 });
 
 // 代辦事項
 document.getElementById("addTodo").addEventListener("click", function() {
     let taskText = document.getElementById("todoInput").value;
-    if (taskText) {
-        let task = document.createElement("li");
-        task.innerText = taskText;
-        task.addEventListener("click", function() { this.style.textDecoration = "line-through"; });
-        document.getElementById("todoList").appendChild(task);
+    if (taskText.trim()) {
+        let li = document.createElement("li");
+        li.innerText = taskText;
+        li.addEventListener("click", function() {
+            li.style.textDecoration = li.style.textDecoration === "line-through" ? "none" : "line-through";
+        });
+        document.getElementById("todoList").appendChild(li);
         document.getElementById("todoInput").value = "";
     }
 });
-document.getElementById("clearTodo").addEventListener("click", function() {
+
+document.getElementById("clearTodos").addEventListener("click", function() {
     alert("你超棒│ ˙ᵕ˙ )꜆♡");
     document.getElementById("todoList").innerHTML = "";
 });
